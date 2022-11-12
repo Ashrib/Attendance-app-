@@ -51,12 +51,6 @@ function App() {
             <Route path="/" element={<LogIn />} />
             <Route path="*" element={<Navigate to="/" replace={true} />} />
           </Routes>
-        // <Routes>
-        //     <Route path="/" element={<LogIn />}/>
-        //     {/* <Route path="/components/signup/signup" element={<SignUp />} /> */}
-        //     <Route path="/components/login/login" element={<LogIn />} />
-        //     <Route path="*" element={<Navigate to="/" replace={true} />} />
-        // </Routes>
         }
       </div> 
     </div>

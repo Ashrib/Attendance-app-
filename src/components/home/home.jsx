@@ -4,8 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { 
     Button, Modal, Typography,Box , AddIcon,
-    DeleteIcon , TextField
+    DeleteIcon , TextField, MenuItem ,FormControl
 } from '@mui/material';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+
 import * as React from 'react';
 import { initializeApp } from "firebase/app";
 import { 
@@ -36,8 +38,10 @@ const firebaseConfig = {
 
   
 function Home() {
+    
     const [classModal, setClassModal] = useState(false);
     const [studentModal, setStudentModal] = useState(false);
+    const [attendanceModal, setAttendanceModal] = useState(false);
     // add class
     const [teacherName, setTeacherName] = useState(null);
     const [courseName, setCourseName] = useState(null);
@@ -103,12 +107,11 @@ function Home() {
         signOut(auth).then(() => {
             // Sign-out successful.
             console.log("signout successful");
-            alert("You are successfully logout")
             navigate("/login")
         
         }).catch((error) => {
             // An error happened.
-            console.log("signout failed");
+            alert("signout failed");
         });
     }
     
@@ -135,6 +138,7 @@ function Home() {
                 console.log("Document written with ID: ", docRef.id);
               } catch (e) {
                 console.error("Error adding document: ", e);
+                alert("Error adding document: ", e);
               }
               setTeacherName(null);
               setCourseName(null);
@@ -162,11 +166,7 @@ function Home() {
             CNIC && contactNumber && rollNumber && stdPic 
             !== null
             ) {
-                const cloudinaryData = new FormData();
-                cloudinaryData.append("file", stdPic);
-                cloudinaryData.append("upload_preset", "create-posts images")
-                cloudinaryData.append("cloud_name", "dwfzx0tds")
-                axios.post(`https://api.cloudinary.com/v1_1/dwfzx0tds/image/upload`, cloudinaryData, { headers: { 'Content-Type': 'multipart/form-data' } })
+                
             try {
                 const docRef = await addDoc(collection(db, "students"),{
                   stdName: studentName,
@@ -197,12 +197,14 @@ function Home() {
             }
 
     }
-    
-    
+    // attendance
+    const attendanceModalHandler = () => {
+        setAttendanceModal(true);
+    }
     return (
       <div id="home-page">
         <nav>
-            <span>Home</span>
+            <span className='home'>Home</span>
             <div className='left-div'>
             <ul>
                 <li>
@@ -212,7 +214,7 @@ function Home() {
                     <Button variant="outlined" onClick={addStudentModal}>Add student</Button>
                 </li>
                 <li>
-                    <Button variant="outlined">Mark Attendance</Button>
+                    <Button variant="outlined" onClick={attendanceModalHandler}>Mark Attendance</Button>
                 </li>
             </ul>
             <Button variant="contained" onClick={logoutHandler}>
@@ -306,6 +308,40 @@ function Home() {
             :
             null
         }
+        {
+            (attendanceModal)?
+            <div className='modal'>
+                <div id ='std-modal-box'>
+                <div className='modal-head'>
+                    <span 
+                    onClick={()=>{setAttendanceModal(false)}}
+                    >
+                    X
+                    </span>
+                </div>
+                <div className='modal-body'>
+                    
+                    <div className='addclass'>
+                        <form onSubmit={addStudent}>
+                        <input type="number"
+                        onChange={(e)=>{setStudentName(e.target.value)}}
+                        />
+                        
+                        
+                        <Button variant="outlined" type='submit'>Add Student</Button>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+            :
+            null
+        }
+        
+
+        <div>
+
+        </div>
 
         
     </div>

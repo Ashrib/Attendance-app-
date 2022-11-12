@@ -2,12 +2,19 @@
     display: flex;
     width: 100%;
 }
+.home{
+    margin-left: 20px;
+    font-size: 1.6em;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
 nav{
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(255, 125, 125);
+    background-color: rgb(253, 133, 133);
 }
 nav > div > ul{
     display: flex;
@@ -41,12 +48,11 @@ nav > ul > li{
     height: 360px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    bottom: 50;
+    box-shadow: rgba(0, 0, 0, 0.649) 0px 5px 15px;
+    margin: auto;
 }
 .modal-head{
     width: 100%;
-    background-color: yellow;
     text-align: right;
 }
 .modal-head>span{
