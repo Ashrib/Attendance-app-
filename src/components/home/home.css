@@ -1,0 +1,71 @@
+#home-page{
+    display: flex;
+    width: 100%;
+}
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 125, 125);
+}
+nav > div > ul{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin-right: 10px;
+}
+nav > ul > li{
+    display: inline;
+}
+.left-div{
+    display: flex;
+    gap: 3px;
+    padding: 3px 0px;
+}
+.modal{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: calc(100vw);
+    height: calc(100vh);
+    background-color: rgba(0, 0, 0, 0.924) 0px 5px 15px;
+    
+}
+#modal-box, #std-modal-box{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 490px;
+    min-width: 260px;
+    height: 360px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    bottom: 50;
+}
+.modal-head{
+    width: 100%;
+    background-color: yellow;
+    text-align: right;
+}
+.modal-head>span{
+    margin-right: 15px;
+    cursor: pointer;
+}
+.modal-head>span:hover{
+    color: red;
+}
+.modal-body{
+    display: flex;
+    height: 100%;
+}
+.addclass{
+    display: flex;
+}
+.addclass>form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
