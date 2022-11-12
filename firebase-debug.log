@@ -1,0 +1,86 @@
+[debug] [2022-11-12T15:19:26.383Z] ----------------------------------------------------------------------
+[debug] [2022-11-12T15:19:26.388Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\LAPTOP POINT\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-11-12T15:19:26.389Z] CLI Version:   11.16.0
+[debug] [2022-11-12T15:19:26.389Z] Platform:      win32
+[debug] [2022-11-12T15:19:26.390Z] Node Version:  v16.14.2
+[debug] [2022-11-12T15:19:26.392Z] Time:          Sat Nov 12 2022 20:19:26 GMT+0500 (Pakistan Standard Time)
+[debug] [2022-11-12T15:19:26.392Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-12T15:19:26.546Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-12T15:19:26.547Z] > authorizing via signed-in user (asharib920@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\LAPTOP POINT
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-11-12T15:19:35.511Z] Using project from CLI flag: twitter-f90d3
+[debug] [2022-11-12T15:19:35.526Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/twitter-f90d3 [none]
+[debug] [2022-11-12T15:19:36.431Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/twitter-f90d3 403
+[debug] [2022-11-12T15:19:36.432Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/twitter-f90d3 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2022-11-12T15:19:36.435Z] HTTP Error: 403, The caller does not have permission
+[debug] [2022-11-12T15:19:36.864Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\LAPTOP POINT\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\LAPTOP POINT\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project twitter-f90d3. Please make sure the project exists and your account has permission to access it.
+[debug] [2022-11-12T15:21:55.989Z] ----------------------------------------------------------------------
+[debug] [2022-11-12T15:21:55.999Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\LAPTOP POINT\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-11-12T15:21:56.001Z] CLI Version:   11.16.0
+[debug] [2022-11-12T15:21:56.002Z] Platform:      win32
+[debug] [2022-11-12T15:21:56.002Z] Node Version:  v16.14.2
+[debug] [2022-11-12T15:21:56.006Z] Time:          Sat Nov 12 2022 20:21:56 GMT+0500 (Pakistan Standard Time)
+[debug] [2022-11-12T15:21:56.007Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-12T15:21:56.367Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-12T15:21:56.369Z] > authorizing via signed-in user (asharib920@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\LAPTOP POINT
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-11-12T15:23:09.630Z] Using project from CLI flag: twitter-f90d3
+[debug] [2022-11-12T15:23:09.642Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/twitter-f90d3 [none]
+[debug] [2022-11-12T15:23:10.416Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/twitter-f90d3 403
+[debug] [2022-11-12T15:23:10.417Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/twitter-f90d3 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2022-11-12T15:23:10.419Z] HTTP Error: 403, The caller does not have permission
+[debug] [2022-11-12T15:23:10.801Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\LAPTOP POINT\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\LAPTOP POINT\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project twitter-f90d3. Please make sure the project exists and your account has permission to access it.

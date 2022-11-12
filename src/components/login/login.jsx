@@ -44,14 +44,21 @@ function LogIn() {
                 let path = `newPath`; 
                 alert("Welcome " + auth?.currentUser?.displayName)
                 navigate("/")
-                // window.location.reload();
+                setPasswordCheck(true);
+                setEmailCheck(true);
+
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                console.log("firebase login error: ", errorCode, errorMessage);
-                setEmailCheck(false);
+                if(errorCode === "auth/wrong-password"){
                 setPasswordCheck(false);
+
+                }else{
+                setEmailCheck(false);
+
+                }
+                console.log("firebase login error: ", errorCode);
             });
 
 

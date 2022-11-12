@@ -86,10 +86,8 @@ function Home() {
             console.log(getClasses)
         });
       
-        // if (getClasses.length !== 0 ) {
-            console.log("classes", getClasses); 
+            console.log("classes*******", getClasses); 
             setClasses(getClasses)
-        // }
         });
         }
         realTimeData();
@@ -97,7 +95,6 @@ function Home() {
           console.log("Clean up")
           unsubscribe();
         }
-        
       },[])
 
     //admin logout
@@ -150,7 +147,7 @@ function Home() {
               setClassModal(false);
             }
             else{
-                alert("Fill out All fields First")
+                alert("Fill fields")
             }
 
     }
@@ -193,7 +190,7 @@ function Home() {
               setClassModal(false);
             }
             else{
-                alert("Fill out All fields First")
+                alert("Fill fields ")
             }
 
     }
@@ -219,7 +216,7 @@ function Home() {
             </ul>
             <Button variant="contained" onClick={logoutHandler}>
                 logout
-            </Button>;
+            </Button>
             </div>
         </nav>
         {
@@ -337,11 +334,7 @@ function Home() {
             :
             null
         }
-        
-
-        <div>
-
-        </div>
+    
 
         
     </div>
