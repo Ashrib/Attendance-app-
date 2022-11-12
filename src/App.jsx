@@ -38,19 +38,6 @@ function App() {
 
   return (
     <div id='body-div'>
-      {
-        (isLogin)?
-        <nav>
-        <ul>
-          <li >Logout</li>
-          <li >Logout</li>
-          <li >Logout</li>
-        </ul>
-        </nav>
-        :
-        null
-      }
-
       <div id='container'>
       
         {(isLogin) ?

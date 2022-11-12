@@ -3,10 +3,7 @@ import { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import {Link,useNavigate,Navigate} from "react-router-dom"
 import { initializeApp } from "firebase/app";
-import {
-   getFirestore,  collection, getDocs,
-   doc, onSnapshot, getDoc
-} from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB82o1wYdcyXnKqOx4KzGtoS5rYpgQ1yzQ",
@@ -29,6 +26,8 @@ function LogIn() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [emailCheck, setEmailCheck] = useState(true);
+  const [passwordCheck, setPasswordCheck] = useState(true);
   let navigate = useNavigate()
 
   const loginSubmitHandler = async (e) => {
@@ -51,6 +50,8 @@ function LogIn() {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 console.log("firebase login error: ", errorCode, errorMessage);
+                setEmailCheck(false);
+                setPasswordCheck(false);
             });
 
 
@@ -73,12 +74,22 @@ function LogIn() {
         placeholder="Enter your email" className="email-inp inp-field" 
         onChange={ (e) => {setEmail(e.target.value)} }
         />
+        {(emailCheck)? 
+        null 
+        :
+        <span>Invalid email</span>
+        }
       </div>
       <div className='input-col'>
         <input type="password" name='current-password'
         placeholder="Enter your password" className="password-inp inp-field" 
         onChange={ (e) => {setPassword(e.target.value)} }
         />
+        {(password)? 
+        null 
+        :
+        <span>Invalid password</span>
+        }
       </div>
       <button type="submit" id='login-btn'>Log In</button>
       </form>
